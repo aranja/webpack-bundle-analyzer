@@ -5,7 +5,7 @@
     "noImplicitAny": true,
     "outDir": "build",
     "rootDir": ".",
-    "sourceMap": false,
+    "sourceMap": true,
     "strictNullChecks": true
   },
   "exclude": [

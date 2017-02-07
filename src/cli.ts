@@ -1,7 +1,7 @@
 import commander = require('commander');
 import fs = require('fs');
 
-import size_tree = require('./size_tree');
+import size_deps = require('./size_deps');
 import webpack_stats = require('./webpack_stats');
 
 function printStats(json: string, opts: { outputAsJson: boolean, shareStats: boolean }) {
@@ -23,11 +23,11 @@ The parsing error was:
     return;
   }
 
-  const depTrees = size_tree.dependencySizeTree(bundleStats);
+  const depTrees = size_deps.dependencySizeTree(bundleStats);
   if (opts.outputAsJson) {
       console.log(JSON.stringify(depTrees, undefined, 2));
   } else {
-      depTrees.forEach(tree => size_tree.printDependencySizeTree(tree, opts.shareStats));
+      depTrees.forEach(tree => size_deps.printDependencySizeTree(tree, opts.shareStats));
   }
 }
 
