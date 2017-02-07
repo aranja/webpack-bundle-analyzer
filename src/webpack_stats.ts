@@ -14,11 +14,16 @@ export interface WebpackChunk {
 	// TODO
 }
 
+export interface WebpackReason {
+	moduleId: number;
+}
+
 export interface WebpackModule {
 	id: number;
 	identifier: Path;
 	name: string;
 	size: Bytes;
+	reasons: WebpackReason[];
 }
 
 export interface CompilationBase {
