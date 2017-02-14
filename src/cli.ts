@@ -57,6 +57,7 @@ if (commander.args[0]) {
   try {
     printStats(fs.readFileSync(commander.args[0]).toString(), opts);
   } catch (err) {
+  	console.error(err);
     process.exit(1);
   }
 } else if (!process.stdin.isTTY) {

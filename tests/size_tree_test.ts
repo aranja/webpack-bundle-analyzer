@@ -105,7 +105,8 @@ describe('dependencySizeTree()', () => {
 				id: 0,
 				identifier: path.join('/', 'to', 'loader.js!', 'path', 'to', 'project', 'node_modules', 'dep', 'foo.js'),
 				size: 1234,
-				name: path.join('.', 'foo.js')
+				name: path.join('.', 'foo.js'),
+				reasons: [],
 			}],
 			errors: [],
 			warnings: [],
@@ -143,12 +144,14 @@ describe('dependencySizeTree()', () => {
 				id: 0,
 				identifier: path.join('/', 'path', 'to', 'project', 'node_modules', '@scope', 'package1', 'foo.js'),
 				size: 1234,
-				name: path.join('.', 'foo.js')
+				name: path.join('.', 'foo.js'),
+				reasons: []
 			}, {
 				id: 0,
 				identifier: path.join('/', 'path', 'to', 'project', 'node_modules', '@scope', 'package2', 'bar.js'),
 				size: 1234,
-				name: path.join('.', 'bar.js')
+				name: path.join('.', 'bar.js'),
+				reasons: []
 			}],
 			errors: [],
 			warnings: [],
