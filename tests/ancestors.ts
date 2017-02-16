@@ -16,7 +16,8 @@ const nodes = new Map<number, number[]>([
 const getParent = (node: number) : number[] => nodes.get(node) || [];
 
 const test = (nodes : number[], ancestor : number) => {
-	equal(ancestor, soleAncestor(nodes, getParent), `(${nodes.join(', ')}) => ${ancestor}`);
+	const found = soleAncestor(nodes, getParent);
+	equal(ancestor, found, `(${nodes.join(', ')}) => ${ancestor} !== ${found}`);
 };
 
 describe('soleAncestor()', () => {
