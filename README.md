@@ -16,6 +16,14 @@ in the bundle, ordered by the size of all the used modules.
 For further reading on reducing the size of Webpack bundles,
 see their [optimization guide](http://webpack.github.io/docs/optimization.html)
 
+## This fork
+
+This fork creates a package dependency tree instead of file system tree. The cli
+is same as before and the output is similar. The main difference is that a package
+might appear in multiple places depending on use. In spite of this, each module
+only appers once, so the sizes add up correctly. Shared packages will also indicate
+which packages are using it.
+
 ## Usage
 
 ````
