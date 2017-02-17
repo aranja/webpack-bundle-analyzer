@@ -16,7 +16,7 @@ in the bundle, ordered by the size of all the used modules.
 For further reading on reducing the size of Webpack bundles,
 see their [optimization guide](http://webpack.github.io/docs/optimization.html)
 
-## This fork
+## Fork
 
 This fork creates a package dependency tree instead of file system tree. The cli
 is same as before and the output is similar. The main difference is that a package
